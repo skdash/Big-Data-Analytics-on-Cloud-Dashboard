@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Big Data Analytics Dashboard</title>
+   
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/css/signup.css" rel="stylesheet">
+
+    <script src="../static/js/index.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">Sign In</a></li>
+            <li role="presentation"><a href="/showSignUp">Sign Up</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Big Data Analytics Dashboard</h3>
+      </div>
+
+      <br><br>
+
+      <div class="jumbotron">
+        <h2>Setup Cluster</h2>
+
+      <div class="row marketing">
+        <div class="col-lg-4">
+          
+            <form class="form-inline" method="POST" action="{{ url_for('index') }}">
+                <div class="form-group">
+
+                    <h4>VMs</h4>
+                    <div class="input-group">
+                            <select name="vms" class="selectpicker form-control">
+                            <option value="0">Select One</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            </select>
+                    </div>
+                    <br><br>
+                    <h4>Master Node specification</h4>
+                    <div class="input-group">
+                            <select name="master" class="selectpicker form-control">
+                            <option value="0">Select One</option>
+                            <option value="1">Large</option>
+                            <option disabled>CPU: 4 DISK: 80 RAM: 8192</option>
+                            <option disabled> </option>
+                            <option value="2">Medium</option>
+                            <option disabled>CPU: 2 DISK: 40 RAM: 4096</option>
+                            </select>
+                    </div>
+                    <br><br>
+                    <h4>Cluster Node specification</h4>
+                    <div class="input-group">
+                            <select name="cluster" class="selectpicker form-control">
+                            <option value="0">Select One</option>
+                            <option value="1">Large</option>
+                            <option disabled>CPU: 4 DISK: 80 RAM: 8192</option>
+                            <option disabled> </option>
+                            <option value="2">Medium</option>
+                            <option disabled>CPU: 2 DISK: 40 RAM: 4096</option>
+                            </select>
+                    </div>
+                    <br><br>
+                <button type="submit" class="btn btn-lg btn-success">Go</button>
+                </div>
+            </form>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
+
